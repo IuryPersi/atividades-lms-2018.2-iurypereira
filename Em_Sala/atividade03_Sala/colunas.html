@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>atv03_sala</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+
+        }
+
+        .menu-lateral {
+            background-color: pink;
+            float: left;
+            width: 30%;
+        }
+
+        .container {
+            background-color: purple;
+            float: left;
+            width: 70%;
+        }
+
+        .layout {
+            overflow: hidden;
+            /*Considera altura  do float*/
+        }
+
+        .menu-lateral ul {
+            list-style-type: none;
+        }
+
+        .menu-lateral ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .menu-lateral ul li a:hover {
+            background-color: rgb(126, 32, 71);
+        }
+    </style>
+</head>
+
+<body>  
+    <div class="layout">
+        <nav class="menu-lateral">
+            <ul>
+                <li><a href="">HTML</a> </li>
+                <li><a href="">CSS</a></li>
+                <li><a href="">JS</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="container">
+            Conteudo
+        </div>
+    </div>
+</body>
+
+</html>
