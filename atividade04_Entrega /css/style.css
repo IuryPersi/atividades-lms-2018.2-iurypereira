@@ -6,7 +6,9 @@ margin: 0px;
 
 .topo{
 background-color: white;
-margin: 16px;
+overflow: hidden;
+margin: 7px;
+position: relative;
 }
 
 
@@ -34,19 +36,68 @@ letter-spacing: 3px;
 }
 
 
+
+
+
+
 .menu-left{
     font-family: "Segoe UI",Arial,sans-serif;
     color: #fff ;
     background-color:#4CAF50 ;
     overflow: hidden;
-    position: relative;
-    z-index:4;
-    float: left;
-    list-style-type: none;
-
+  
     
+   
 }
-.dropdown a{
+
+.menu-left ul{
+list-style-type: none;
+}
+
+
+
+
+
+.menu-left ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    float: left;
+    padding: 8px;
     
-    list-style-type: none;
+
+}
+
+
+
+.menu-left ul li a:hover, .dropdown .dropdown-bottom0:hover, .dropdown:hover .dropdown-bottom0{
+    background-color: rgb(100, 100, 100);
+}
+
+
+.dropdown{
+    float: left;
+}
+
+
+.dropdown .dropdown-bottom0{
+            padding: 8px;
+            cursor: pointer;
+}
+
+.dropdown .dropdown-content{
+    position: absolute;
+    background-color: white;
+    color: black;
+    display: none;
+}
+
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
+.dropdown-content a {
+    color: blue;
 }
