@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .navegador-superior{
+            background-color: rgb(150,150,150);
+            overflow: hidden;
+        }
+        .container{
+            background-color: rgb(200, 200, 200);
+        }
+        .navegador-superior ul{
+            list-style-type: none;
+        }
+        .navegador-superior ul li a{
+            text-decoration: none;
+            color: black;
+            display: block;
+            float: left;
+            padding: 8px;
+        }
+        .navegador-superior ul li a:hover, .dropdown .dropdown-button:hover, .dropdown:hover .dropdown-button{
+            background-color: rgb(100, 100, 100);
+        }
+        .dropdown{
+            float: left;
+        }
+        .dropdown .dropdown-button{
+            padding: 8px;
+            cursor: pointer;
+        }
+        .dropdown .dropdown-content{
+            position: absolute;
+            background-color: rgb(150, 150, 150);
+            display: none;
+        }
+        /* .dropdown-button:hover + .dropdown-content{
+            display: block;
+        } */
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navegador-superior">
+        <ul>
+            <li><a href="">HTML</a></li>
+            <li>
+                <div class="dropdown">
+                    <div class="dropdown-button">
+                        CSS
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="">Link 1</a></li>
+                            <li><a href="">Link 2</a></li>
+                            <li><a href="">Link 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li><a href="">JS</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        Conteúdo
+    </div>
+</body>
+</html>

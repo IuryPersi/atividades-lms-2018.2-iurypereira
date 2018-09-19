@@ -1,0 +1,52 @@
+*{
+padding: 0px;
+margin: 0px;
+    
+}
+
+.topo{
+background-color: white;
+margin: 16px;
+}
+
+
+.w3-logo{
+color:#555555;
+text-decoration: none;
+font-family: "FontAwesome";
+position: relative;
+float:left;
+font-size: 37px;
+letter-spacing: 3px;
+
+
+}
+.w3-logo .com{
+    color:green;
+} 
+
+.w3-right{
+    position: relative;
+    font-family: "Segoe UI",Arial,sans-serif;
+    float:right;
+    letter-spacing: 3px;
+    margin: 16px;
+}
+
+
+.menu-left{
+    font-family: "Segoe UI",Arial,sans-serif;
+    color: #fff ;
+    background-color:#4CAF50 ;
+    overflow: hidden;
+    position: relative;
+    z-index:4;
+    float: left;
+    list-style-type: none;
+
+    
+}
+.dropdown a{
+    
+    list-style-type: none;
+}
