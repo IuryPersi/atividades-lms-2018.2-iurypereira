@@ -4,6 +4,13 @@ margin: 0px;
     
 }
 
+
+body{
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
 .topo{
 background-color: white;
 overflow: hidden;
@@ -15,7 +22,7 @@ position: relative;
 .w3-logo{
 color:#555555;
 text-decoration: none;
-font-family: "FontAwesome";
+font-family: 'Font Awesome\ 5 Free';
 position: relative;
 float:left;
 font-size: 37px;
@@ -36,27 +43,19 @@ letter-spacing: 3px;
 }
 
 
-
-
-
-
 .menu-left{
     font-family: "Segoe UI",Arial,sans-serif;
     color: #fff ;
     background-color:#4CAF50 ;
     overflow: hidden;
-  
+
     
-   
+
 }
 
 .menu-left ul{
 list-style-type: none;
 }
-
-
-
-
 
 .menu-left ul li a{
     text-decoration: none;
@@ -64,14 +63,24 @@ list-style-type: none;
     display: block;
     float: left;
     padding: 8px;
-    
+ 
+}
+.dropdown-content ul li a{
+color: black;
 
 }
 
+ 
+.menu-left .dropdown-content ul li a:hover{
+background-color: gray;
 
+    
+}
 
-.menu-left ul li a:hover, .dropdown .dropdown-bottom0:hover, .dropdown:hover .dropdown-bottom0{
-    background-color: rgb(100, 100, 100);
+.menu-left ul li a:hover, .dropdown .dropdown-bottom0:hover, .dropdown:hover .dropdown-content{
+    background-color: white;
+    color:black;
+    
 }
 
 
@@ -87,17 +96,45 @@ list-style-type: none;
 
 .dropdown .dropdown-content{
     position: absolute;
-    background-color: white;
     color: black;
     display: none;
+    z-index:1;
+  
 }
-
 
 .dropdown:hover .dropdown-content{
     display: block;
 }
 
 
-.dropdown-content a {
-    color: blue;
+
+.dropdown-content .dropdown-content-text{
+  margin: 10px;  
+}
+
+
+.menu-lateral{
+    position:fixed;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    box-shadow: 1px 1px 10px #d3d3d3;
+    
+
+}
+.menu-lateral-content  a:hover{
+    background-color: gray;
+}
+
+.menu-lateral .menu-lateral-content, .menu-lateral .menu-lateral-content  a{
+    text-decoration: none;
+    display: block;
+    list-style-type: none;
+    color: black;
+    margin-left: 5px;
+    padding:3px;
+}
+.menu-lateral .menu-lateral-content-text{
+    margin: 10px;  
+
 }
