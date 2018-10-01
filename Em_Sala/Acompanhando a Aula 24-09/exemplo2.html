@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu site doidera</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .cabecalho {
+            background-color: rgb(200, 200, 200);
+            padding: 15px;
+        }
+
+
+        .navegador-superior {
+            background-color: rgb(180, 180, 180);
+        }
+
+        .menu-lateral li a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        .menu-lateral li a:hover {
+            background: rgb(160, 160, 160)
+        }
+
+        .conteudo{
+            padding: 20px;
+        }
+
+        @media screen and (min-width:780px){
+            .navegador-superior{
+                float: left;
+                width:25%;
+                height:calc(100vh - 67px);
+                background-color: aqua;
+
+
+
+            }
+            .conteudo{
+                float: left
+            }
+        }
+        
+        
+    </style>
+
+
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1>Meu site show</h1>
+    </header>
+
+
+    <div class="container">
+        <nav class="navegador-superior">
+            <ul class="menu-lateral">
+                <li><a href="">html1</a></li>
+                <li><a href="">html2</a></li>
+                <li><a href="">html3</a></li>
+
+            </ul>
+
+        </nav>
+        <div class="conteudo">
+                <h1>Conteudo</h1>
+
+            </div>
+
+    </div>
+
+</body>
+
+</html>
