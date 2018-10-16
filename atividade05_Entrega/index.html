@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade 05</title>
+    <link rel="stylesheet" href="jasny-bootstrap.css">
+    <link rel="stylesheet" href="jasny-bootstrap.js">
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+      }
+      
+        header {
+    float:left;
+    width: 100%;
+        }
+    .botao{
+
+        display: none;
+    }
+         @media screen and (max-width:480px){
+             .aside-controller{
+                 position: relative;
+                 display: block;
+             }
+         }
+
+
+
+ * {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  border-right: 1px solid #999;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.manipulador {
+  cursor: pointer;
+}
+
+.controller {
+  display: none;
+}
+
+.menu-escondido {
+  background-color: #444;
+  border-right: 1px solid #000;
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  left: -200px;
+  transition: left 0.25s;
+ 
+}
+
+.content {
+  background-color: #ddd;
+  width: 100%;
+  transition: margin-left 0.25s;
+}
+
+.controller:checked ~ .menu-escondido {
+  left: 0;
+}
+
+.controller:checked ~ .content {
+  margin-left: 200px;  
+}
+
+.menu-escondido, .content {
+  padding: 20px;
+ 
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-escondido, .menu-escondido a {
+  color: #ddd;
+  text-decoration:none; 
+  display: block;
+}
+
+.menu-escondido a:hover{
+    background: #999;
+
+}
+
+/*questao 3*/
+
+*:focus {
+    outline:none
+}
+ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.menu-accordion {
+    border:1px solid #ccc;
+    border-bottom:none;
+    background:#eee;
+}
+.menu-accordion span {
+    padding:10px;
+    display:block;
+}
+.menu-accordion > li {
+    border-bottom:1px solid #ccc;
+}
+.menu-accordion li ul {
+    background:#fff;
+    border-top:1px solid #ccc;
+    display:none;
+
+}
+/*Sualizar o menu*/
+/*
+.menu-accordion ul{
+
+    max-height: 0px;
+    transition: max-height 1000ms;   
+}
+
+.menu-accordion ul:hover{
+    max-height: 1600px; 
+   
+}*/
+
+.menu-accordion li:focus ul {
+    display:block;
+   
+   
+
+}
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Atividade 05</h1>
+    </header>
+
+
+
+    <div class="wrapper">
+            <input type="checkbox" id="controller" class="controller" />
+           
+           <div class="menu-escondido">
+             <h3>Brand</h3>
+             <ul class="menu">
+               <li><a href="#">Home</a></li>
+               <li><a href="#">Link</a></li>
+               <li><a href="#">Link</a></li>
+             </ul>  
+           </div>
+           
+           <div class="content">
+             <label for="controller" class="manipulador">&#x2630;</label>
+             
+            <p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in aliquet nisl. Praesent sed leo congue, fringilla eros eu, tempus metus. Nam mollis odio ipsum, non vehicula ipsum accumsan sodales. Morbi varius vitae elit euismod cursus. Donec a dapibus justo, in facilisis nisi. Suspendisse ut turpis dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui risus, tincidunt at odio ut, ultrices dignissim ipsum. Cras ultrices erat nec leo luctus varius. Nulla sollicitudin tincidunt nulla, ut porta mauris volutpat vitae. Suspendisse ornare dolor sit amet massa venenatis pulvinar.
+            </p>
+           </div>
+         </div>
+
+
+
+
+         <ul class="menu-accordion">
+                <li tabindex="0"> <span> Collapsible Group Item #1 </span>
+                    <ul>
+                        <li><span> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li tabindex="1"> <span>Collapsible Group Item #2</span>
+                    <ul>
+                        <li><span> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span>
+                        </li>
+                      
+                    </ul>
+                </li>
+                <li tabindex="2"> <span> Collapsible Group Item #3</span>
+                    <ul>
+                        <li><span> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span>
+                        </li>
+                        
+                    </ul>
+                </li>
+            </ul>
+
+
+
+
+           
+
+</body>
+
+</html>
