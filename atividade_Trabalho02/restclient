@@ -1,0 +1,53 @@
+http://rest.learncode.academy/api/iury/groups
+[ {
+    "groupName": "grupo da familia" ,
+    "groupID": "grupofamilia"
+ },
+{
+    "groupName": "grupo do churrasco" ,
+    "groupID": "grupochurrasco"
+  }
+ ]
+
+
+
+
+http://rest.learncode.academy/api/iury/grupofamilia
+
+ [{
+    "userName": "iury007" ,
+    "message": "Tudo bem?"
+ },
+{
+    "userName": "iury212" ,
+    "message": "Tudo Tranqs"
+  },
+  
+ {
+    "userName": "iury007" ,
+    "message": "Que bom"
+  } 
+
+ ]
+
+
+
+
+http://rest.learncode.academy/api/iury/grupochurrasco
+ [{
+    "userName": "moreira" ,
+    "message": "Na paz?"
+ },
+{
+    "userName": "more2" ,
+    "message": "Show"
+  },
+  
+ {
+    "userName": "moreira" ,
+    "message": "Daora"
+  } 
+
+ ]
+
+
