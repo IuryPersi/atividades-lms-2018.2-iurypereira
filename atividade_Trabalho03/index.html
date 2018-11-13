@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery3.1.js"></script>
+
+    <title>Produtos</title>
+</head>
+
+<body>
+    <header>
+        <div class="login">
+                <button id="login" style="display:none;">login</button> 
+                <button id="logout" style="display:none;">logout</button> 
+
+        </div>
+    </header>
+
+    <div class="produtos">
+
+    </div>
+
+
+</body>
+
+<script>
+
+
+/*
+ function verifica_Storage() {
+            if (localStorage.length > 0) {
+             
+            }
+
+        }
+*/
+
+if (typeof(Storage) !== "undefined") {
+    localStorage.setItem("login","iury" );
+    $("#logout").css("display","block");
+    $("#login").css("display","none");
+    console.log(localStorage);
+
+} else {
+    
+}
+
+
+$("#logout").click(function () {
+            localStorage.removeItem("login");
+            console.log(localStorage);
+            $("#logout").css("display","none");
+            $("#login").css("display","block");
+
+        });
+
+
+
+
+</script>
+
+</html>

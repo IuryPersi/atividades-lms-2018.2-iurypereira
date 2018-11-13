@@ -10,7 +10,7 @@
   text-rendering: optimizeLegibility;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/imag.jpg");
+  background-image: url("img/Fundo-WhatsApp.jpg");
   background-size: cover;
   background-repeat: none;
 
@@ -20,6 +20,29 @@
 
         }
 
+        
+        .grupo {
+            float: left;
+            width: 30%;
+            border-bottom-width: 1px;
+            border-color: #b2b6b263;
+            border-style: solid;
+            height: 650px;
+        }
+
+        #formulario-grupo{
+            margin-top: 130px;
+                   }
+        #id-grupo,#nome-grupo,#submit-grupo {
+            border-radius: 10px;
+        }         
+        
+        .logo{
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            display: inline;
+
+        }
 
         .topo{
             background-color: #c3ffc4;
@@ -28,30 +51,73 @@
             position: relative;
             }
             
-            
-            .w3-logo{
-            color:#555555;
-            text-decoration: none;
-            font-family: 'Font Awesome\ 5 Free';
-            position: relative;
-            float:left;
-            font-size: 37px;
-            letter-spacing: 3px;
-            
-            
-            }
-            .w3-logo .com{
-                color:green;
-            } 
-            
-            .w3-right{
+            .conversas{
+                width: 69%;
+                height: 500px;
+                float: right;
+                border-bottom-width: 1px;
+                border-color: #ecedec63;
+                border-style: solid;
+                border-left: none;
+             }
+             .titulo-nome{
+                margin-top: 12px;
+                margin-left: 10px;
+                display: flex;
+             }
+             .conversa{
                 position: relative;
-                font-family: "Segoe UI",Arial,sans-serif;
-                float:right;
-                letter-spacing: 3px;
-                margin: 16px;
+                height: 500px;
+             }
+            .text{
+                width: 100%;
+                background: #ecedec;
+                float: left;
+                margin-top: 10px;
+                height: 60px;
+                position: absolute;
+                bottom: 0;
             }
-    
+            .text textarea{
+                border: none;
+                margin: 10px;
+                border-radius: 15px;
+                width: 73%;
+                max-width: 73%;
+                min-width: 73%;
+                float: left;
+                height: 35px;
+                max-height: 35px;
+                min-height: 35px;
+                outline: none;
+                padding-left: 10px;
+                padding-top: 5px;
+                font-size: 12px;
+                font-family: sans-serif;
+            }
+            .text img{
+                float: left;
+                width: 5%;
+                margin: 15px;
+            }
+
+
+            #teste_sms{
+                float: left;
+                width: 65%;
+                margin-right: 150px;
+                padding: 20px;
+                border: none;
+                box-shadow: 1px 1px 1px #adadad;
+                outline: none;
+                cursor: pointer;
+                margin-top: -21px;
+            }
+
+             .submit_sms{
+                 width:50px;
+                 border-radius: 20px;
+             }
 
             .menu-lateral{
                 position:fixed;
@@ -94,6 +160,7 @@
                     border: none;
                     padding: 5px;
                     width: 150px;
+                    background: #adadad;
                     margin-bottom: 20px;
                     font-size: 18px;
                     outline: none;

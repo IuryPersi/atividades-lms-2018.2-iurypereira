@@ -10,18 +10,69 @@
    </head>
 
 <body>
-    
+
+<div class="grupo">
+    <head>
+    <div class="logo"> Tele Whats</div>
+   
+    </head>
 
     <form id="formulario-grupo">
             Id Grupo : <input type="text" id="id-grupo">
             Nome Grupo : <input type="text" id="nome-grupo">
-            <input type="submit" value="Adicionar">
+            <input id="submit-grupo" type="submit" value="Adicionar">
         </form>
+        <span><h3>Grupos:<h3></span>
+
+        <input  style="display:none;" id="botao1" type="button"  value="" onclick="VerID(this.value)">
+  
+        <input  style="display:none;" id="botao2" type="button" value="" onclick="VerID(this.value)"> 
+
+        <input  style="display:none;" id="botao3" type="button" value="" onclick="VerID(this.value)">
+
+</div>
+<button id="modal-button" class="modal-button">login</button>
+<button id="logout" style="display:none;">logout</button> 
 
 
-    <button id="logout" style="display:none;">logout</button>
+<div class="conversas">
+        <div class="conversa">
+            <header>
+                <label class="titulo-nome">Conversas</label>
+                <ul class="ul-todo">
 
-    <button id="modal-button" class="modal-button">login</button>
+                    </ul>
+            </header>
+            <div class="text">
+                   
+                     <form id="formulario_msg">
+                      
+                        <br><input type="text"  size="122" placeholder="Digite a Mensagem Aqui" id="teste_sms">
+                        <input type="submit" class="submit_sms"value="ok">
+                    
+            
+            
+                    </form>
+            </div>
+        </div>
+    </div>
+
+
+    <nav class="lista-amigos">
+        
+            <div id="list">
+            
+        </div>
+       
+    
+       
+            <form id="form_mensagem">
+            
+        </form>
+        </nav>
+
+   
+
     <div class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
@@ -39,35 +90,8 @@
 
 
 
-    <nav class="lista-amigos">
-        
-        <div id="list">
-        <form id="formulario_msg">
-           
-
-            <input  style="display:none;" id="botao1" type="button"  value="" onclick="VerID(this.id)">
-  
-            <input  style="display:none;" id="botao2" type="button" value="" onclick="VerID(this.id)"> 
-
-            <input  style="display:none;" id="botao3" type="button" value="" onclick="VerID(this.id)">
-            <nav class="mensagens">
-            <br><input type="text" id="teste_sms">mensagem
-            <input type="submit"  value="ok">
-            </nav>
-
-
-        </form>
-    </div>
    
-
-   
-        <form id="form_mensagem">
-        
-    </form>
-    </nav>
-    <ul class="ul-todo">
-
-    </ul>
+    
 
     <script>
         let grupo_geral = "http://rest.learncode.academy/api/iury/";
@@ -185,12 +209,15 @@
                     data = +1;
                     
                     }
+                    
+
                     if(data.length == 2 ){
                         botao2.style.display = "block";
                         botao2.id=idgrupo.value;
                         botao2.value=nomegrupo.value;
                         data = +1;
                     }
+                    
                     if(data.length == 3 ){
                         botao3.style.display = "block";
                         botao3.id=idgrupo.value;
@@ -275,6 +302,7 @@
 
                     }
             }
+            
             xhttp.open("POST", grupo_geral, true);
             xhttp.setRequestHeader("Content-type","application/json");
             let item =[{
@@ -303,23 +331,28 @@
             xhttp.send();
         }
         
-
+        let grupobutton='';
         
         function VerID(NomeBotao)
         {   
        
             grupo_geral = "http://rest.learncode.academy/api/iury/"+NomeBotao+"";
             
-            
-             console.log(grupo_geral);
+            grupobutton = NomeBotao;
           
+             console.log(grupobutton);
+
         }
+
+
         ul_todo.innerHTML = "";
  
         formulario_msg.addEventListener('submit',function(e){
+
             postItem_mensagem(localStorage.login,teste_sms.value);
-           
-            addItemTODOInterface("GRUPO:"+nomegrupo.value  +"-- Usuário: "+localStorage.login + "-- Mensagem: " + teste_sms.value);
+            console.log(grupobutton);
+
+            addItemTODOInterface("GRUPO:"+grupobutton  +"-- Usuário: "+localStorage.login + "-- Mensagem: " + teste_sms.value);
             console.log(teste_sms.value);
           
             
