@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Loja Online</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Inicio</a></li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li>
+                    <div class="dropdown registro-drop">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Cadastro
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu cadastro">
+                            <form action="">
+                                <label for="inputUsuario">Usuário:</label>
+                                <li><input type="text" class="form-control login" placeholder="Usuário"></li>
+                                <li><input type="password" class="form-control senha" placeholder="Senha"></li>
+                                <input class="btn btn-primary" type="submit" value="OK">
+                            </form>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown login-drop">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Login
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu login-form">
+                            <form>
+                                <label for="inputUsuario">Usuário : </label>
+                                <li><input type="text" class="form-control login" placeholder="Usuário"></li>
+                                <li><input type="password" class="form-control senha" placeholder="Senha"></li>
+                                <input class="btn btn-primary" id="button_login" type="submit" value="OK">
+                            </form>
+                        </ul>
+                    </div>
+                </li>
+
+                <li id="carrinho">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Carrinho
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <div id="post-result">
+
+                            </div>
+                            <div>
+                                <a href="finalizar.html" class="btn btn-success">Finalizar</a>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="logout">logout</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main">
+        <!-- Marketing messaging and featurettes
+      ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row" id="realizadas-products">
+                <div class="col-lg-4" id="realizadas-product-details">
+                    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        alt="Generic placeholder image" width="140" height="140">
+                    <h2 class="realizadas-product-name">Heading</h2>
+                    <p class="realizadas-price">Preço unitário: <span>R$ 100,00</span></p>
+                    <p class="realizadas-price-total">Preço total: <span>R$ 100,00</span></p>
+                    <p class="realizadas-qtd">Quantidade: <span>10</span></p>
+                    <p class="realizadas-date">Data da compra: <span>10/10/2018</span></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
+
+
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery3.1.js"></script>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/realizadas.js"></script>
+</body>
+
+</html>

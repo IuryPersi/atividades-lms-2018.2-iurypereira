@@ -2,64 +2,127 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/jquery3.1.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <script src="js/jquery3.1.js"></script>
+  <script src="js/bootstrap.js"></script>
 
-    <title>Produtos</title>
+
+  <title>Produtos</title>
 </head>
 
 <body>
-    <header>
-        <div class="login">
-                <button id="login" style="display:none;">login</button> 
-                <button id="logout" style="display:none;">logout</button> 
 
-        </div>
-    </header>
+  <header>
+    <div class="login">
 
-    <div class="produtos">
 
     </div>
+  </header>
 
 
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Loja Online</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Inicio</a></li>
+        <li class="compras-realizadas-item"><a href="compras-realizadas.html">Compras realizadas</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+        <li>
+          <div class="dropdown registro-drop">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Cadastro
+              <span class="caret"></span></button>
+            <ul class="dropdown-menu cadastro">
+              <form action="">
+                <label for="inputUsuario">Usuário:</label>
+                <li><input type="text" class="form-control login" placeholder="Usuário"></li>
+                <li><input type="password" class="form-control senha" placeholder="Senha"></li>
+                <input class="btn btn-primary" type="submit" value="OK">
+              </form>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown login-drop">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Login
+              <span class="caret"></span></button>
+            <ul class="dropdown-menu login-form">
+              <form>
+                <label for="inputUsuario">Usuário : </label>
+                <li><input type="text" class="form-control login" placeholder="Usuário"></li>
+                <li><input type="password" class="form-control senha" placeholder="Senha"></li>
+                <input class="btn btn-primary" id="button_login" type="submit" value="OK">
+              </form>
+            </ul>
+          </div>
+        </li>
+
+        <li id="carrinho">
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Carrinho
+              <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <div id="post-result">
+
+              </div>
+              <div>
+                <a href="finalizar.html" class="btn btn-success">Finalizar</a>
+              </div>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="logout">logout</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="row" id="products">
+    <div class="col-sm-6 col-md-6 col-lg-6" id="product-details">
+      <div class="thumbnail">
+        <img src="img/iphonex.jpeg" alt="..." class="product-image">
+        <div class="caption">
+          <h3 class="product-name">Iphone X</h3>
+          <span class="valor-produto" value="2">Valor: R$5.500</span>
+          <input type="text" value="tente me alterar" disabled>
+
+          <form>
+            <div class="form-row align-items-center">
+              <div class="col-auto my-1">
+                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                <select class="custom-select mr-sm-2 qtd-product">
+                  <option selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
+                <button type="submit" class="btn btn-primary botao-add">Adicionar</button>
+              </div>
+
+              <div class="col-auto my-1">
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
-<script>
-
-
-/*
- function verifica_Storage() {
-            if (localStorage.length > 0) {
-             
-            }
-
-        }
-*/
-
-if (typeof(Storage) !== "undefined") {
-    localStorage.setItem("login","iury" );
-    $("#logout").css("display","block");
-    $("#login").css("display","none");
-    console.log(localStorage);
-
-} else {
-    
-}
-
-
-$("#logout").click(function () {
-            localStorage.removeItem("login");
-            console.log(localStorage);
-            $("#logout").css("display","none");
-            $("#login").css("display","block");
-
-        });
-
-
-
-
-</script>
+<script src="js/scripts.js"></script>
 
 </html>
